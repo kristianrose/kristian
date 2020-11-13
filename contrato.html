@@ -10,321 +10,299 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Abel">
 
 </head>
-<body class="align">
-
-  <div class="grid align__item">
-
-    <h2>Enter your payment information below</h2>
-
-    <div class="card">
-
-      <header class="card__header">
-        <h3 class="card__title">Payment Details</h3>
-        <svg xmlns="http://www.w3.org/2000/svg" class="card__logo" width="140" height="43" viewBox="0 0 175.7 53.9"><style>.visa{fill:#fff;}</style><path class="visa" d="M61.9 53.1l8.9-52.2h14.2l-8.9 52.2zm65.8-50.9c-2.8-1.1-7.2-2.2-12.7-2.2-14.1 0-24 7.1-24 17.2-.1 7.5 7.1 11.7 12.5 14.2 5.5 2.6 7.4 4.2 7.4 6.5 0 3.5-4.4 5.1-8.5 5.1-5.7 0-8.7-.8-13.4-2.7l-2-.9-2 11.7c3.3 1.5 9.5 2.7 15.9 2.8 15 0 24.7-7 24.8-17.8.1-5.9-3.7-10.5-11.9-14.2-5-2.4-8-4-8-6.5 0-2.2 2.6-4.5 8.1-4.5 4.7-.1 8 .9 10.6 2l1.3.6 1.9-11.3M164.2 1h-11c-3.4 0-6 .9-7.5 4.3l-21.1 47.8h14.9s2.4-6.4 3-7.8h18.2c.4 1.8 1.7 7.8 1.7 7.8h13.2l-11.4-52.1m-17.5 33.6c1.2-3 5.7-14.6 5.7-14.6-.1.1 1.2-3 1.9-5l1 4.5s2.7 12.5 3.3 15.1h-11.9zm-96.7-33.7l-14 35.6-1.5-7.2c-2.5-8.3-10.6-17.4-19.6-21.9l12.7 45.7h15.1l22.4-52.2h-15.1"/><path fill="#F7A600" d="M23.1.9h-22.9l-.2 1.1c17.9 4.3 29.7 14.8 34.6 27.3l-5-24c-.9-3.3-3.4-4.3-6.5-4.4"/></svg>
-
-      </header>
-
-      <form action="" method="post" class="form">
-
-        <div class="card__number form__field">
-          <label for="card__number" class="card__number__label">Card Number</label>
-          <input type="text" id="card__number" class="card__number__input" placeholder="4000 1234 5678 9010">
-        </div>
-
-
-        <div class="card__expiration form__field">
-          <label for="card__expiration__year">Expiration</label>
-          <select name="" id="card__expiration__year">
-            <option value="january">January</option>
-            <option value="februrary">Februrary</option>
-            <option value="march">March</option>
-            <option value="april">April</option>
-            <option value="may">May</option>
-            <option value="june">June</option>
-            <option value="july">July</option>
-            <option value="august">August</option>
-            <option value="september">September</option>
-            <option value="october">October</option>
-            <option value="november">November</option>
-            <option value="december">December</option>
-          </select>
-
-          <select name="" id="">
-            <option value="2015">2015</option>
-            <option value="2016">2016</option>
-            <option value="2017">2017</option>
-            <option value="2018">2018</option>
-            <option value="2019">2019</option>
-          </select>
-        </div>
-
-        <div class="card__ccv form__field">
-          <label for="">CCV</label>
-          <input type="text" class="card__ccv__input" placeholder="583">
-        </div>
-
-      </form>
-
+<html>
+	<div class="container">
+    <div class="price">
+        <h1>Awesome, that's $99.99 !</h1>
     </div>
-
-    <p class="text--center"><a href="#">change</a> payment method</p>
-
-  </div>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-</body>
+    <div class="card__container">
+        <div class="card">
+            <div class="row paypal">
+                <div class="left">
+                    <input id="pp" type="radio" name="payment" />
+                    <div class="radio"></div>
+                    <label for="pp">Paypal</label>
+                </div>
+                <div class="right">
+                    <img src="http://i68.tinypic.com/2rwoj6s.png" alt="paypal" />
+                </div>
+            </div>
+            <div class="row credit">
+                <div class="left">
+                    <input id="cd" type="radio" name="payment" />
+                    <div class="radio"></div>
+                    <label for="cd">Debit/ Credit Card</label>
+                </div>
+                <div class="right">
+                    <img src="http://i66.tinypic.com/5knfq8.png" alt="visa" />
+                    <img src="http://i67.tinypic.com/14y4p1.png" alt="mastercard" />
+                    <img src="http://i63.tinypic.com/1572ot1.png" alt="amex" />
+                    <img src="http://i64.tinypic.com/2i92k4p.png" alt="maestro" />
+                </div>
+            </div>
+            <div class="row cardholder">
+                <div class="info">
+                    <label for="cardholdername">Name</label>
+                    <input placeholder="e.g. Richard Bovell" id="cardholdername" type="text" />
+                </div>
+            </div>
+            <div class="row number">
+                <div class="info">
+                    <label for="cardnumber">Card number</label>
+                    <input id="cardnumber" type="text" pattern="[0-9]{16,19}" maxlength="19" placeholder="8888-8888-8888-8888"/>
+                </div>
+            </div>
+            <div class="row details">
+                <div class="left">
+                    <label for="expiry-date">Expiry</label>
+                    <select id="expiry-date">
+                        <option>MM</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <span>/</span>
+                     <select id="expiry-date">
+                        <option>YYYY</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="right">
+                    <label for="cvv">CVC/CVV</label>
+                    <input type="text" maxlength="4" placeholder="123"/>
+                    <span data-balloon-length="medium" data-balloon="The 3 or 4-digit number on the back of your card." data-balloon-pos="up">i</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button type="submit"><i class="ion-locked"></i> Confirm and Pay</button>
+    </div>
+</div>
 	<style>
-		@mixin clearfix() {
+		@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900)
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900)
 
-  &:before,
-  &:after {
-    content: ' ';
-    display: table;
-  }
+.container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100vh
+    flex-direction: column
 
-  &:after {
-    clear: both;
-  }
+*
+    box-sizing: border-box
+    
+html
+    background-color: #171A3D
+    font-family: 'Lato', sans-serif
 
-}
+.price
+    h1
+        font-weight: 300
+        color: #18C2C0
+        letter-spacing: 2px
 
-$base-bgcolor: #f1f1f1;
-$base-color: #171a1c;
-$base-font-weight: 300;
-$base-font-size: 1rem;
-$base-line-height: 1.5;
-$base-font-family: Source Sans Pro;
-$base-font-family-fallback: sans-serif;
+.card
+    margin-top: 30px
+    margin-bottom: 30px
+    width: 520px
+    height: 400px
+    .row
+        height: 20%
+        width: 100%
+        border-bottom: 1.2px solid #292C58
+        &:last-child
+            border: none
+    .paypal
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+    .details
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+    .paypal, .credit
+        background-color: #1E2148
+    .cardholder, .number, .details
+        background-color: #242852
+        
+//////////////////// ROW ONE & TWO
+.paypal, .credit
+    .left, .right
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+    .left
+        float: left
+        margin-left: 50px
+        label
+            margin-left: 10px
+            font-size: 1rem
+            cursor: pointer
+            font-weight: 700
+            letter-spacing: 0.5px
+            color: #fff
+        input[type=radio]
+            visibility: hidden
+        .radio
+            position: absolute
+            top: -2px
+            left: -20px
+            border: 3px solid #414365
+            width: 25px
+            height: 25px
+            border-radius: 50%
+            background-color: #292B52
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+            &::before
+                position: absolute
+                content: ''
+                border-radius: 50%
+                top: 5px
+                left: 5px
+                width: 9px
+                height: 9px
+                background-color: transparent
+                transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+    .right
+        float: right
+        margin-right: 30px
+        img
+            width: 42px
+            height: 30px
+            margin-left: 10px
 
-* {
-  box-sizing: border-box;
-}
+input[type=radio]:checked ~ .radio
+    border: 3px solid #90E1E3
+    background-color: #18C2C0
+    &::before
+        background-color: #fff
+    
+////////////////// ROW THREE & FOUR
+.cardholder, .number
+    .info
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        margin-left: 40px
+        label
+            display: inline-block
+            letter-spacing: 0.5px
+            color: #8F92C3
+            width: 100px
+        input
+            display: inline-block
+            max-width: 300px
+            width: 300px
+            background-color: transparent
+            font-family: 'Source Code Pro'
+            border: none
+            outline: none
+            margin-left: 50px
+            color: white
+            &::placeholder
+                font-family: 'Source Code Pro'
+                color: #444880
+            
+#cardnumber, #cardnumber::placeholder
+    letter-spacing: 2px
+///////////////////// DETAILS
+.details
+    .left, .right
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+    .left
+        float: left
+        padding-left: 40px
+        width: 50%
+        label
+            letter-spacing: 0.5px
+            color: #8F92C3
+            width: 100px
+            margin-right: 20px
+        select
+            font-family: 'Source Code Pro'
+            cursor: pointer
+            appearance: none
+            background: transparent
+            border: none
+            outline: none
+            color: #444880
+        span
+            font-family: 'Source Code Pro'
+            color: #444880
+            margin: 0 2px
+    .right
+        float: right
+        width: 50%
+        label
+            margin-right: 20px
+            color: #8F92C3
+        input
+            text-align: center
+            width: 50px
+            font-family: 'Source Code Pro'
+            cursor: pointer
+            background: transparent
+            border: none
+            outline: none
+            color: #fff
+            &::placeholder
+                font-family: 'Source Code Pro'
+                color: #444880
+        span
+            text-align: center
+            display: inline-block
+            font-family: 'Source Code Pro'
+            cursor: pointer
+            margin-left: 50px
+            color: #18C2C0
+            width: 24px
+            height: 24px
+            border: 2px solid #18C2C0
+            border-radius: 50%
 
-html {
-  height: 100%;
-}
-
-body {
-  background-color: $base-bgcolor;
-  color: $base-color;
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family, $base-font-family-fallback;
-  margin: 0;
-  min-height: 100%;
-  padding: 5vw 0;
-}
-
-.align {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-
-  &__item {
-
-    &--start {
-      align-self: flex-start;
-    }
-
-    &--end {
-      align-self: flex-end;
-    }
-
-  }
-
-}
-
-.text {
-
-  &--center {
-    text-align: center;
-  }
-
-}
-
-$card-bgcolor: #171a1c;
-$card-border-radius: 1rem;
-$card-color: #47474e;
-$card-padding: 2rem;
-
-.card {
-  background-color: $card-bgcolor;
-  border-radius: $card-border-radius;
-  color: $card-color;
-  padding: $card-padding;
-  font-family: Abel;
-
-  &__header {
-    @include clearfix();
-    margin-bottom: 4rem;
-  }
-
-  &__title {
-    color: #fff;
-    float: left;
-    font-size: 1.5rem;
-  }
-
-  &__logo {
-    float: right;
-  }
-
-  &__number {
-
-    &__input {
-      font-size: 2rem;
-    }
-
-  }
-
-  &__expiration {
-    float: left;
-  }
-
-  &__ccv {
-    float: right;
-
-    &__input {
-      width: 1.75rem;
-    }
-
-  }
-
-  .ui-selectmenu-button {
-    float: left;
-    margin-right: 2rem;
-  }
-
-}
-
-$input-color: #fff;
-
-input {
-  background-color: transparent;
-  border: 0;
-  color: $input-color;
-  font: inherit;
-  width: auto;
-
-  &::placeholder {
-    color: $input-color;
-  }
-
-}
-
-label {
-  display: block;
-}
-
-.form {
-  @include clearfix();
-
-  &__field {
-    margin-bottom: 1.5rem;
-  }
-
-  input {
-    outline: 0;
-
-    &[type="email"],
-    &[type="password"] {
-      width: 100%;
-    }
-
-  }
-
-}
-
-$grid-max-width: 36rem;
-$grid-width: 90%;
-
-.grid {
-  margin: 0 auto;
-  max-width: $grid-max-width;
-  width: $grid-width;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0 0 .5rem;
-}
-
-svg {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-$link-color: #171a1c;
-
-a {
-  color: $link-color
-}
-
-.ui-selectmenu {
-
-  &-menu {
-    display: none;
-    font-family: Abel;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    z-index: 999;
-
-    li {
-      background-color: #171a1c;
-      color: #fff;
-      padding: .25rem 1rem;
-      cursor: pointer;
-
-      &.ui-state-focus {
-        background-color: #47474e;
-      }
-
-    }
-
-    .ui-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      overflow: auto;
-    }
-
-  }
-
-  &-open {
-    display: block;
-  }
-
-  &-button {
-    color: #fff;
-    cursor: pointer;
-    outline: 0;
-
-    &.ui-corner-top {
-
-      .ui-icon-triangle-1-s {
-        transform: rotate(-180deg);
-      }
-
-    }
-
-    .ui-icon-triangle-1-s {
-      background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-254 408.9 42 24" fill="#47474e"><path d="M-212 411.9c0-1.7-1.3-3-3-3-.8 0-1.5.3-2.1.8l-15.9 15.9-15.7-15.7c-.5-.6-1.4-1-2.3-1-1.7 0-3 1.3-3 3 0 .8.3 1.5.8 2.1l18 18c.5.6 1.3.9 2.2.9.8 0 1.6-.4 2.2-.9l18-18c.5-.6.8-1.3.8-2.1z"/></svg>') 50% / 14px no-repeat;
-      float: right;
-      height: 14px;
-      margin-top: 5px;
-      transform-origin: 50%;
-      transition: transform .3s;
-      width: 14px;
-    }
-
-  }
-
-}
+///////////////////// Button
+.button button
+    font-size: 1.2rem
+    font-weight: 400
+    letter-spacing: 1px
+    width: 520px
+    background-color: #18C2C0
+    border: none
+    color: #fff
+    padding: 18px
+    border-radius: 5px
+    outline: none
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1)
+    &:hover
+        background-color: #15aeac
+    &:active
+        background-color: #139b99
+    i
+        font-size: 1.2rem
+        margin-right: 5px
 	</style>
 </html>
