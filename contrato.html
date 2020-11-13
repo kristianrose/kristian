@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="resources/css/index.css">
     <script type="text/javascript">
 
-        var titleText = document.title;
-        
-        function titleMarquee() {
-        
-         titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
-         document.title = titleText;
-         setTimeout("titleMarquee()", 450);
-         }
+var repeat = 1
+        var title = document.title
+        var leng = title.length
+        var start = 1
+        function titlemove() {
+            titl = title.substring(start, leng) + title.substring(0, start)
+            document.title = titl
+            start++
+            if (start == leng + 1) {
+                start = 0
+                if (repeat == 0) return
+            }
+            setTimeout("titlemove()", 400)
+        }
+        if (document.title)
+            titlemove()
+    
         
         </script>
 </head>
