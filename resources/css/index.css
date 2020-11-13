@@ -1,0 +1,147 @@
+html, body{
+    margin: 0;
+}
+
+html{
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1em;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+}
+
+header a{
+    text-decoration: none;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(125, 125, 125);
+}
+
+.pink{
+    color: rgb(60, 198, 240);
+}
+
+#card{
+    margin: auto;
+}
+
+
+#card .avatar{
+    border-radius: 50%;
+}
+
+#card .half{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#card .right.half{
+    margin-left: 2em;
+}
+
+#card h1{
+    margin: 0;
+    font-size: 5.2em;
+    font-weight: 800;
+}
+
+#card p{
+    font-weight: 500;
+    font-size: 1.5em;
+    margin: .5em .1em;
+}
+
+#card small{
+    display: inline-block;
+    color: rgb(125, 125, 125);
+    font-size: .8em;
+    margin-top: .5em;
+}
+
+#socials{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.separator{
+    vertical-align: middle;
+    display: inline-block;
+    height: 50px;
+    border-left: 2px solid rgb(200, 200, 200);
+    margin: 0 1.1em 0em 1em;
+}
+
+.social{
+    display: inline-block;
+    text-decoration: none;
+    padding: .3em;
+    vertical-align: middle;
+    transition: opacity .15s;
+}
+
+.social:hover{
+    opacity: .8;
+}
+
+.social svg{
+    height: 48px;
+}
+
+.social.github path{
+    fill: #141414;
+}
+
+.social.twitter path{
+    fill: #1da1f3;
+}
+
+.social.youtube path{
+    fill: red;
+}
+
+@media (max-width: 740px){
+    #card{
+        text-align: center;
+    }
+
+    #card p{
+        margin: 0.5em 0;
+    }
+
+    #card .right.half{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 580px){
+    #card{
+        text-align: center;
+    }
+
+    #card h1{
+        font-size: 3.5em;
+    }
+
+    #card p{
+        font-size: 1.2em;
+    }
+}
