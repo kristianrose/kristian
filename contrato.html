@@ -26,6 +26,14 @@
 </div>
 </html>
 
+<script>
+	 $("#login-button").click(function(event){
+		 event.preventDefault();
+	 
+	 $('form').fadeOut(500);
+	 $('.wrapper').addClass('form-success');
+});
+</script>
 <style>
 	@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
 
