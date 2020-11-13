@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Me contrate</title>
     <link rel="stylesheet" href="resources/css/index.css">
-    <script type="text/javascript">
-
-var repeat = 1
-        var title = document.title
-        var leng = title.length
-        var start = 1
-        function titlemove() {
-            titl = title.substring(start, leng) + title.substring(0, start)
-            document.title = titl
-            start++
-            if (start == leng + 1) {
-                start = 0
-                if (repeat == 0) return
-            }
-            setTimeout("titlemove()", 400)
-        }
-        if (document.title)
-            titlemove()
-    
-        
-        </script>
 </head>
 <body>
+    
+    <script>
 
+        var repeat = 1
+                var title = document.title
+                var leng = title.length
+                var start = 1
+                function titlemove() {
+                    titl = title.substring(start, leng) + title.substring(0, start)
+                    document.title = titl
+                    start++
+                    if (start == leng + 1) {
+                        start = 0
+                        if (repeat == 0) return
+                    }
+                    setTimeout("titlemove()", 400)
+                }
+                if (document.title)
+                    titlemove()
+            
+                
+                </script>
 
    <center>
        <h3>
